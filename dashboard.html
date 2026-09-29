@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockFlow | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">S</div>
+          <span>StockFlow</span>
+        </div>
+
+        <nav>
+          <a class="nav-link active" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="produtos.html">Produtos</a>
+          <a class="nav-link" href="cadastro.html">Cadastrar</a>
+          <a class="nav-link" href="movimentacao.html">Movimentação</a>
+          <button id="logoutButton" class="btn btn-secondary" type="button">Sair</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <div class="topbar">
+          <h2>Dashboard</h2>
+          <div class="user-pill">
+            <div class="circle">U</div>
+            <span id="usuarioLogado">Usuário</span>
+          </div>
+        </div>
+
+        <section class="grid-cards">
+          <div class="card green">
+            <div class="label">Total de produtos</div>
+            <div class="value" id="totalProdutos">0</div>
+          </div>
+
+          <div class="card green">
+            <div class="label">Valor estimado</div>
+            <div class="value" id="valorEstoque">R$ 0,00</div>
+          </div>
+
+          <div class="card yellow">
+            <div class="label">Produtos em baixa</div>
+            <div class="value" id="produtosBaixo">0</div>
+          </div>
+
+          <div class="card red">
+            <div class="label">Estoque disponível</div>
+            <div class="value" id="estoqueDisponivel">0</div>
+          </div>
+        </section>
+
+        <section class="grid-cards">
+          <div class="card">
+            <div class="label">Entradas (7 dias)</div>
+            <div class="value" id="entradasSeteDias">0</div>
+          </div>
+
+          <div class="card">
+            <div class="label">Saídas (7 dias)</div>
+            <div class="value" id="saidasSeteDias">0</div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="table-card">
+            <h3>Atividades recentes</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Produto</th>
+                    <th>Tipo</th>
+                    <th>Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody id="tabelaMovimentos"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Produtos que precisam de atenção</h3>
+            <ul class="list-simple" id="listaProdutosAtencao"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
