@@ -51,7 +51,7 @@ Se a pasta do projeto estiver em outro nome, substitua `stockflowPJ` pelo nome c
 
 ## 5. Como testar o login
 
-O sistema vem com um usuário padrão já cadastrado:
+O nosso sistema está com um usuário padrão já cadastrado:
 
 - E-mail: `admin@stockflow.com`
 - Senha: `admin123`
@@ -87,8 +87,8 @@ Na página de produtos e no dashboard, os itens com quantidade menor ou igual ao
 
 A regra usada é:
 
-- `quantidade <= estoque_minimo` → baixa quantidade
-- `quantidade == 0` → estoque crítico
+- `quantidade <= estoque_minimo` → baixo estoque.
+- `quantidade == 0` → estoque crítico.
 
 ## 10. Observações finais
 
